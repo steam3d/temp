@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://help.magicpods.app/sitemap.xml

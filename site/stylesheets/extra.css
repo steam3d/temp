@@ -1,0 +1,69 @@
+:root {
+    --md-accent-fg-color:         #0461DF; 
+    --md-primary-fg-color:        #0486F3;
+}
+:root > *{
+    --md-code-bg-color: rgba(5, 136, 243, .1);
+}
+
+.md-nav--integrated .md-nav__link[for=__toc]~.md-nav {
+    border-left: .05rem solid transparent;
+}
+
+.md-header[data-md-state=shadow] {
+    box-shadow: none;
+    transition: none;    
+}
+
+.md-header {
+    background-color: var(--md-default-bg-color);
+    color: var(--md-default-fg-color);
+}
+
+.md-nav--primary .md-nav__title[for=__drawer] {
+    background-color: transparent;
+    color: var(--md-default-fg-color);
+}
+
+.md-typeset table:not([class]) {
+    box-shadow: none;
+}
+
+.md-search__input+.md-search__icon {
+    color: var(--md-default-fg-color);
+}
+
+.md-search__input {
+    background-color: transparent;
+}
+.md-search__input + .md-search__icon {
+    color: var(--md-code-fg-color);
+}
+.md-search__input::placeholder {
+    color: var(--md-code-fg-color);
+}
+.md-search__input:hover {
+    background-color: rgba(5, 136, 243, .05);
+}
+
+
+.md-typeset table:not([class]) th {
+    background-color: var(--md-default-bg-color);
+    color: var(--md-default-fg-color--light);    
+    border-top: none;
+}
+
+.md-typeset table:not([class]) tr:hover {
+    background-color: transparent;  
+}
+
+.md-typeset table:not([class]) tr:nth-child(even) {
+    background-color: rgba(5, 136, 243, .05);
+}
+
+.md-typeset table:not([class]) td {
+    border-top: none;
+}
+.md-typeset h1 {
+    color: var(--md-default-fg-color);
+}
