@@ -1,7 +1,21 @@
 :root {
     --md-accent-fg-color:         #0461DF; 
     --md-primary-fg-color:        #0486F3;
+   
+    
 }
+:root, [data-md-color-scheme="default"]{
+    --md-shadow-z1:                 none;
+    --md-shadow-z2:                 none;
+    --md-shadow-z3:                 none;
+}
+
+:root, [data-md-color-scheme="slate"]{
+    --md-shadow-z1:                 none;
+    --md-shadow-z2:                 none;
+    --md-shadow-z3:                 none;
+}
+
 :root > *{
     --md-code-bg-color: rgba(5, 136, 243, .1);
 }
@@ -10,14 +24,11 @@
     border-left: .05rem solid transparent;
 }
 
-.md-header[data-md-state=shadow] {
-    box-shadow: none;
-    transition: none;    
-}
-
 .md-header {
     background-color: var(--md-default-bg-color);
     color: var(--md-default-fg-color);
+    box-shadow: none;
+    transition: none;    
 }
 
 .md-nav--primary .md-nav__title[for=__drawer] {
@@ -25,37 +36,30 @@
     color: var(--md-default-fg-color);
 }
 
-.md-typeset table:not([class]) {
-    box-shadow: none;
-}
-
-.md-search__input+.md-search__icon {
-    color: var(--md-default-fg-color);
-}
-
-.md-search__input {
+.md-search__form {
     background-color: transparent;
 }
+
 .md-search__input + .md-search__icon {
     color: var(--md-code-fg-color);
 }
 .md-search__input::placeholder {
     color: var(--md-code-fg-color);
 }
-.md-search__input:hover {
-    background-color: rgba(5, 136, 243, .05);
+
+.md-search__form:hover{
+    background-color: hsla(207, 96%, 49%, 0.05);
 }
 
 
-.md-typeset table:not([class]) th {
-    background-color: var(--md-default-bg-color);
-    color: var(--md-default-fg-color--light);    
-    border-top: none;
+
+.md-typeset table:not([class]) {
+    box-shadow: none;
+    border: none;
+    pointer-events: none;
 }
 
-.md-typeset table:not([class]) tr:hover {
-    background-color: transparent;  
-}
+
 
 .md-typeset table:not([class]) tr:nth-child(even) {
     background-color: rgba(5, 136, 243, .05);
@@ -64,6 +68,13 @@
 .md-typeset table:not([class]) td {
     border-top: none;
 }
+
+.md-typeset table:not([class]) th {
+    color: var(---md-default-fg-color);
+    font-weight: 400;
+    opacity: 0.5;
+}
+
 .md-typeset h1 {
     color: var(--md-default-fg-color);
 }
