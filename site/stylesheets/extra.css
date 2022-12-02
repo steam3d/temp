@@ -32,7 +32,7 @@
 }
 
 .md-nav--primary .md-nav__title[for=__drawer] {
-    background-color: transparent;
+    background-color: var(--md-default-bg-color);
     color: var(--md-default-fg-color);
 }
 
