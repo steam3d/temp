@@ -1,0 +1,1493 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://help.magicpods.app/fun-magicaap/">
+      
+      
+        <link rel="prev" href="../bt-bluetooth/">
+      
+      
+        <link rel="next" href="../fun-live-tiles/">
+      
+      <link rel="icon" href="../media/favicon.svg">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.0.5">
+    
+    
+      
+        <title>MagicAAP driver - MagicPods Help</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.558e4712.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Rubik";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#magicaap-driver" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="MagicPods Help" class="md-header__button md-logo" aria-label="MagicPods Help" data-md-component="logo">
+      
+  <img src="../media/favicon.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MagicPods Help
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              MagicAAP driver
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="MagicPods Help" class="md-nav__button md-logo" aria-label="MagicPods Help" data-md-component="logo">
+      
+  <img src="../media/favicon.svg" alt="logo">
+
+    </a>
+    MagicPods Help
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Getting started
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bt-bluetooth/" class="md-nav__link">
+        Bluetooth
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          MagicAAP driver
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        MagicAAP driver
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#0-create-a-restore-point" class="md-nav__link">
+    0. Create a restore point
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-copy-the-bitlocker-recovery-key" class="md-nav__link">
+    1. Copy the BitLocker recovery key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-disable-secure-boot" class="md-nav__link">
+    2. Disable Secure Boot
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-switch-windows-to-test-mode" class="md-nav__link">
+    3. Switch Windows to test mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-install-the-magicaap-driver" class="md-nav__link">
+    4. Install the MagicAAP driver
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uninstalling" class="md-nav__link">
+    Uninstalling
+  </a>
+  
+    <nav class="md-nav" aria-label="Uninstalling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-copy-the-bitlocker-recovery-key_1" class="md-nav__link">
+    1. Copy the BitLocker recovery key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-uninstalling-the-magicaap-driver" class="md-nav__link">
+    2. Uninstalling the MagicAAP driver
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-switch-windows-to-normal-mode" class="md-nav__link">
+    3. Switch Windows to normal mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-enable-secure-boot" class="md-nav__link">
+    4. Enable Secure Boot
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" tabindex="0" aria-expanded="false">
+          Features
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Features" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Features
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fun-live-tiles/" class="md-nav__link">
+        Live tiles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fun-widgets/" class="md-nav__link">
+        Widgets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../headphones-change-image/" class="md-nav__link">
+        Change image
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4" tabindex="0" aria-expanded="false">
+          Headphones
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Headphones" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Headphones
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../headphones/other-headphones/" class="md-nav__link">
+        Other headphones
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../headphones/apple-airpods12/" class="md-nav__link">
+        AirPods 1-2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../headphones/apple-airpods3/" class="md-nav__link">
+        AirPods 3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../headphones/apple-airpodsmax/" class="md-nav__link">
+        AirPods Max
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../headphones/apple-airpodspro/" class="md-nav__link">
+        AirPods Pro
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../headphones/apple-airpodspro2/" class="md-nav__link">
+        AirPods Pro 2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../headphones/apple-beatsfitpro/" class="md-nav__link">
+        Beats Fit Pro
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../headphones/apple-beatsflex/" class="md-nav__link">
+        Beats Flex
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../headphones/apple-beatssolo3/" class="md-nav__link">
+        Beats Solo 3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../headphones/apple-beatssolopro/" class="md-nav__link">
+        Beats Solo Pro
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../headphones/apple-beatsstudio3/" class="md-nav__link">
+        Beats Studio 3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../headphones/apple-beatsstudiobuds/" class="md-nav__link">
+        Beats Studio Buds
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../headphones/apple-beatsstudiobudsplus/" class="md-nav__link">
+        Beats Studio Buds Plus
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../headphones/apple-beatsx/" class="md-nav__link">
+        Beats X
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../headphones/apple-powerbeats3/" class="md-nav__link">
+        Power Beats 3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../headphones/apple-powerbeats4/" class="md-nav__link">
+        Power Beats 4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../headphones/apple-powerbeatspro/" class="md-nav__link">
+        Power Beats Pro
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../headphones/sony-wf1000xm3/" class="md-nav__link">
+        Sony WF-1000XM3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../headphones/sony-wh1000xm4/" class="md-nav__link">
+        Sony WH-1000XM4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../headphones/airoha-airpodspro2-1562ae/" class="md-nav__link">
+        Fake AirPods Pro 2 Airoha 1562AE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../headphones/airoha-airpodspro-1562ae/" class="md-nav__link">
+        Fake AirPods Pro Airoha 1562AE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../headphones/airoha-airpods3-1562e/" class="md-nav__link">
+        Fake AirPods 3 Airoha 1562E
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_5" tabindex="0" aria-expanded="false">
+          General settings
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="General settings" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          General settings
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fun-popup-animation/" class="md-nav__link">
+        Pop-up window
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fun-sound-output/" class="md-nav__link">
+        Sound output
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fun-audio-streaming/" class="md-nav__link">
+        Audio streaming
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fun-audio/" class="md-nav__link">
+        VoiceOver
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fun-tray-icon/" class="md-nav__link">
+        System tray icon
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_6" type="checkbox" id="__nav_4_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_6" tabindex="0" aria-expanded="false">
+          Preferences
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Preferences" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_6">
+          <span class="md-nav__icon md-icon"></span>
+          Preferences
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pref-app-settings/" class="md-nav__link">
+        Application settings
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../help-pairing-headphones/" class="md-nav__link">
+        Pair headphones
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" tabindex="0" aria-expanded="false">
+          Resolving known issues
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Resolving known issues" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Resolving known issues
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-infinite-search/" class="md-nav__link">
+        Infinite search
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-mic-low-quality/" class="md-nav__link">
+        Poor sound and mic quality
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-infinite-disconnect/" class="md-nav__link">
+        Infinite disconnect
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-airpods-status-not-updating/" class="md-nav__link">
+        AirPods status not updating
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-theme/" class="md-nav__link">
+        Tray icon is too dark
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-connectivity/" class="md-nav__link">
+        Connectivity issues
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-ble-not-supported/" class="md-nav__link">
+        Bluetooth LE not supported
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-switch-audio-not-available/" class="md-nav__link">
+        Switch audio output not available
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-crashes-at-start/" class="md-nav__link">
+        Сrashes at start
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../translate/" class="md-nav__link">
+        Translate
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../report-issue/" class="md-nav__link">
+        Report issue
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../changelog/" class="md-nav__link">
+        Changelog
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#0-create-a-restore-point" class="md-nav__link">
+    0. Create a restore point
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-copy-the-bitlocker-recovery-key" class="md-nav__link">
+    1. Copy the BitLocker recovery key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-disable-secure-boot" class="md-nav__link">
+    2. Disable Secure Boot
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-switch-windows-to-test-mode" class="md-nav__link">
+    3. Switch Windows to test mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-install-the-magicaap-driver" class="md-nav__link">
+    4. Install the MagicAAP driver
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uninstalling" class="md-nav__link">
+    Uninstalling
+  </a>
+  
+    <nav class="md-nav" aria-label="Uninstalling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-copy-the-bitlocker-recovery-key_1" class="md-nav__link">
+    1. Copy the BitLocker recovery key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-uninstalling-the-magicaap-driver" class="md-nav__link">
+    2. Uninstalling the MagicAAP driver
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-switch-windows-to-normal-mode" class="md-nav__link">
+    3. Switch Windows to normal mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-enable-secure-boot" class="md-nav__link">
+    4. Enable Secure Boot
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="magicaap-driver">MagicAAP driver<a class="headerlink" href="#magicaap-driver" title="Permanent link">⚓︎</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Only install the MagicAAP driver if you are an advanced user and are prepared to reinstall Windows if problems occur. Requires MagicPods version 2.0.72.0 and above.</p>
+</div>
+<p>MagicAAP is a Bluetooth profile driver that allows you to add near-full support for all AirPods and some Beats headphones.</p>
+<p><img alt="" src="../media/MagicAAP-Driver-Sample.png" /></p>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">⚓︎</a></h2>
+<p>The MagicAAP driver is not yet digitally signed, so you will need to switch Windows into test mode to install it. A message will appear in the bottom right corner of the screen indicating that Windows is in test mode.</p>
+<h3 id="0-create-a-restore-point">0. Create a restore point<a class="headerlink" href="#0-create-a-restore-point" title="Permanent link">⚓︎</a></h3>
+<ol>
+<li>Press <code>Start</code> and type <code>Create a restore point</code> in the search box</li>
+<li>In the search results, select <code>Create a restore point</code></li>
+<li>In the window that opens, click <code>Create</code>
+<img alt="" src="../media/MagicAAP-Restore-Point.png" /></li>
+<li>Type the title and press <code>Create</code>
+<img alt="" src="../media/MagicAAP-Restore-Point-Create.png" /></li>
+</ol>
+<p>If there are any problems, you can use this restore point to restore Windows. If you use BitLocker, you will also need a recovery code.</p>
+<h3 id="1-copy-the-bitlocker-recovery-key">1. Copy the BitLocker recovery key<a class="headerlink" href="#1-copy-the-bitlocker-recovery-key" title="Permanent link">⚓︎</a></h3>
+<p>If you are using BitLocker, BitLocker will detect the change in system settings and request a recovery key. You will need to enter the key twice during the installation process.</p>
+<table>
+<thead>
+<tr>
+<th>Icon</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../media/MagicAAP-Bitlocker-Off.png" /></td>
+<td>BitLocker off</td>
+</tr>
+<tr>
+<td><img alt="" src="../media/MagicAAP-Bitlocker-On.png" /></td>
+<td>BitLocker on</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>Open my computer. Right-click the drive with the lock icon and select <code>Manage BitLocker</code> from the context menu<br />
+<img alt="" src="../media/MagicAAP-Bitlocker-Manage.png" /></li>
+<li>In the window that opens, click <code>Back up your recovery key</code> and follow the instructions<br />
+<img alt="" src="../media/MagicAAP-Bitlocker-Recovery-Key.png" /></li>
+<li>Repeat the process for each drive that uses encryption</li>
+</ol>
+<p>Keep the recovery codes in your phone, notebook, or on another computer because you will need to enter the recovery code before Windows starts.</p>
+<blockquote>
+<p>I recommend using the Google query <a href="https://www.google.com/search?q=BitLocker+recovery+key">BitLocker recovery key</a> for more detailed instructions.</p>
+</blockquote>
+<h3 id="2-disable-secure-boot">2. Disable Secure Boot<a class="headerlink" href="#2-disable-secure-boot" title="Permanent link">⚓︎</a></h3>
+<ol>
+<li>Enter your computer's BIOS. Normally, when you turn on your computer, you will need to press one of the F1, F2, F12 or Esc keys to enter the BIOS</li>
+<li>Find the <code>Secure Boot</code> option in the BIOS settings and disable it<br />
+<img alt="" src="../media/MagicAAP-Secure-Boot-Disabled.png" /></li>
+<li>Save your changes and restart your computer</li>
+<li>If you are using BitLocker, enter the <code>Recovery key</code> while the computer is booting<br />
+<img alt="" src="../media/MagicAAP-Bitlocker-Recovery.png" /></li>
+</ol>
+<blockquote>
+<p>I recommend using the Google query <a href="https://www.google.com/search?q=Disable+Secure+Boot">Disable Secure Boot</a> for more detailed instructions.</p>
+</blockquote>
+<h3 id="3-switch-windows-to-test-mode">3. Switch Windows to test mode<a class="headerlink" href="#3-switch-windows-to-test-mode" title="Permanent link">⚓︎</a></h3>
+<ol>
+<li>Right-click on the Windows icon</li>
+<li>From the context menu, select <code>Terminal (Admin)</code> or <code>PowerShell (Admin)</code><br />
+<img alt="" src="../media/MagicAAP-Terminal-Admin.png" /></li>
+<li>Enter command:</li>
+</ol>
+<pre><code>bcdedit /set testsigning ON
+</code></pre>
+<p><img alt="" src="../media/MagicAAP-Testsigning-On.png" />
+4. Restart the computer<br />
+5. If you are using BitLocker, enter the <code>Recovery key</code> while the computer is booting<br />
+<img alt="" src="../media/MagicAAP-Bitlocker-Recovery.png" /></p>
+<h3 id="4-install-the-magicaap-driver">4. Install the MagicAAP driver<a class="headerlink" href="#4-install-the-magicaap-driver" title="Permanent link">⚓︎</a></h3>
+<p>Optionally you can check the integrity of the <a href="https://magicpods.app/utils/magicaap.zip">magicaap.zip</a></p>
+<pre><code>SHA256          E16A8F1C6052432A388D33FDD4AC6D4F3CA909CF4C3DD37A152DB0E9342B66C2
+</code></pre>
+<h4 id="automatic-installation">Automatic installation<a class="headerlink" href="#automatic-installation" title="Permanent link">⚓︎</a></h4>
+<ol>
+<li><a href="https://magicpods.app/utils/magicaap.zip">Download MagicAAP driver</a>  </li>
+<li>Unzip the driver archive and navigate to the driver folder</li>
+<li>Right-click on <code>MagicAAP.inf</code> and select <code>Install</code> in the context menu<br />
+<img alt="" src="../media/MagicAAP-Driver-Install-Auto.png" /></li>
+<li>Confirm the installation of an unsigned driver<br />
+<img alt="" src="../media/MagicAAP-Driver-Install-Warning.png" /></li>
+</ol>
+<h4 id="manual-installation">Manual installation<a class="headerlink" href="#manual-installation" title="Permanent link">⚓︎</a></h4>
+<ol>
+<li><a href="https://magicpods.app/utils/magicaap.zip">Download MagicAAP driver</a></li>
+<li>Unzip the driver archive</li>
+<li>Press <code>Start</code> and type <code>Device Manager</code> in the search box</li>
+<li>In the search results, select <code>Device Manager</code></li>
+<li>In <code>Device Manager</code>, find <code>AAP Server</code> in the <code>Other devices</code> section</li>
+<li>Right-click on it and select <code>Update driver</code> from the context menu<br />
+<img alt="" src="../media/MagicAAP-Manual-Update-Driver.png" /></li>
+<li>In the window that opens, click on <code>Browse my computer for drivers</code>, then specify the path to the driver folder<br />
+<img alt="" src="../media/MagicAAP-Manual-Update-Driver-Install.png" /></li>
+<li>Click <code>Next</code>, the driver will be installed</li>
+<li>Repeat steps 5-8 for each <code>AAP Server</code> device</li>
+</ol>
+<p>You're ready to go. Launch MagicPods and connect your AirPods. Expand the settings for the AirPods you want, and you'll see the familiar iPhone-like settings.</p>
+<h2 id="uninstalling">Uninstalling<a class="headerlink" href="#uninstalling" title="Permanent link">⚓︎</a></h2>
+<p>To uninstall the driver and return Windows to normal mode, repeat the installation steps in reverse order.</p>
+<h3 id="1-copy-the-bitlocker-recovery-key_1">1. Copy the BitLocker recovery key<a class="headerlink" href="#1-copy-the-bitlocker-recovery-key_1" title="Permanent link">⚓︎</a></h3>
+<p>If you are using BitLocker, BitLocker will detect the change in system settings and request a recovery key. You will need to enter the key twice during the uninstalling process.</p>
+<table>
+<thead>
+<tr>
+<th>Icon</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../media/MagicAAP-Bitlocker-Off.png" /></td>
+<td>BitLocker off</td>
+</tr>
+<tr>
+<td><img alt="" src="../media/MagicAAP-Bitlocker-On.png" /></td>
+<td>BitLocker on</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>Open my computer. Right-click the drive with the lock icon and select <code>Manage BitLocker</code> from the context menu<br />
+<img alt="" src="../media/MagicAAP-Bitlocker-Manage.png" /></li>
+<li>In the window that opens, click <code>Back up your recovery key</code> and follow the instructions<br />
+<img alt="" src="../media/MagicAAP-Bitlocker-Recovery-Key.png" /></li>
+<li>Repeat the process for each drive that uses encryption</li>
+</ol>
+<p>Keep the recovery codes in your phone, notebook, or on another computer because you will need to enter the recovery code before Windows starts.</p>
+<blockquote>
+<p>I recommend using the Google query <a href="https://www.google.com/search?q=BitLocker+recovery+key">BitLocker recovery key</a> for more detailed instructions.</p>
+</blockquote>
+<h3 id="2-uninstalling-the-magicaap-driver">2. Uninstalling the MagicAAP driver<a class="headerlink" href="#2-uninstalling-the-magicaap-driver" title="Permanent link">⚓︎</a></h3>
+<ol>
+<li>Press <code>Start</code> and type <code>Device Manager</code> in the search box</li>
+<li>In the search results, select <code>Device Manager</code></li>
+<li>In <code>Device Manager</code>, find <code>MagicAAP</code> in the <code>Bluetooth</code> section</li>
+<li>Right click on it and select <code>Uninstall driver</code> in the context menu<br />
+<img alt="" src="../media/MagicAAP-Manual-Uninstall-Driver.png" /></li>
+<li>Check <code>Attempt to remove the driver for this device.</code> and click <code>Uninstall</code><br />
+<img alt="" src="../media/MagicAAP-Manual-Uninstall-Driver-Uninstall.png" /></li>
+<li>Repeat steps 3-5 for each <code>AAP Server</code> device</li>
+</ol>
+<h3 id="3-switch-windows-to-normal-mode">3. Switch Windows to normal mode<a class="headerlink" href="#3-switch-windows-to-normal-mode" title="Permanent link">⚓︎</a></h3>
+<ol>
+<li>Right-click on the Windows icon</li>
+<li>From the context menu, select <code>Terminal (Admin)</code> or <code>PowerShell (Admin)</code><br />
+<img alt="" src="../media/MagicAAP-Terminal-Admin.png" /></li>
+<li>Enter command:</li>
+</ol>
+<pre><code>bcdedit /set testsigning OFF
+</code></pre>
+<p><img alt="" src="../media/MagicAAP-Testsigning-Off.png" />
+4. Restart the computer<br />
+5. If you are using BitLocker, enter the <code>Recovery key</code> while the computer is booting<br />
+<img alt="" src="../media/MagicAAP-Bitlocker-Recovery.png" /></p>
+<h3 id="4-enable-secure-boot">4. Enable Secure Boot<a class="headerlink" href="#4-enable-secure-boot" title="Permanent link">⚓︎</a></h3>
+<ol>
+<li>Enter your computer's BIOS. Normally, when you turn on your computer, you will need to press one of the F1, F2, F12 or Esc keys to enter the BIOS</li>
+<li>Find the <code>Secure Boot</code> option in the BIOS settings and enable it<br />
+<img alt="" src="../media/MagicAAP-Secure-Boot-Enabled.png" /></li>
+<li>Save changes and restart your computer</li>
+<li>If you are using BitLocker, enter the <code>Recovery key</code> while the computer is booting<br />
+<img alt="" src="../media/MagicAAP-Bitlocker-Recovery.png" />  </li>
+</ol>
+<p>All done. Windows will now run normally and the message in the bottom right-hand corner of the desktop will no longer appear.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.top", "header.autohide"], "search": "../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.51d95adb.min.js"></script>
+      
+    
+  </body>
+</html>
