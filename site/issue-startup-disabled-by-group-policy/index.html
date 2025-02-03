@@ -1770,9 +1770,9 @@
 <p>Your PC’s administrator or certain applications may disable startup for all apps in Windows. By modifying the Windows Registry, you can enable Full Trust and UWP Startup Tasks. This will allow you to choose MagicPods and other apps to start automatically after Windows loads.</p>
 <ol>
 <li>Open the Registry Editor  <ol>
-<li>Press <strong>Win + R</strong> on your keyboard.  </li>
-<li>In the <strong>Run</strong> dialog box, type <code>regedit</code> and press <strong>Enter</strong>.  </li>
-<li>If a <strong>User Account Control (UAC)</strong> prompt appears, click <strong>Yes</strong> to allow changes.  </li>
+<li>Press <code>Win + R</code> on your keyboard.  </li>
+<li>In the <code>Run</code> dialog box, type <code>regedit</code> and press <code>Enter</code>.  </li>
+<li>If a <code>User Account Control (UAC)</code> prompt appears, click <code>Yes</code> to allow changes.  </li>
 </ol>
 </li>
 <li>
@@ -1782,7 +1782,7 @@
 </li>
 <li>
 <p>Create or Modify the Required Values<br />
-    You need to ensure the following <strong>DWORD (32-bit) values</strong> exist and have the correct settings:</p>
+    You need to ensure the following <code>DWORD (32-bit) values</code> exist and have the correct settings:</p>
 <table>
 <thead>
 <tr>
@@ -1816,20 +1816,20 @@
 </table>
 <p>How to Modify an Existing Value</p>
 <ol>
-<li>In the <strong>right pane</strong>, look for the value you want to change.  </li>
-<li><strong>Double-click</strong> on it.  </li>
-<li>In the <strong>Value data</strong> field, enter the correct number from the table above.  </li>
-<li>Click <strong>OK</strong>.  </li>
+<li>In the <code>right pane</code>, look for the value you want to change.  </li>
+<li><code>Double-click</code> on it.  </li>
+<li>In the <code>Value data</code> field, enter the correct number from the table above.  </li>
+<li>Click <code>OK</code>.  </li>
 </ol>
 <p>How to Create a New Value (If It’s Missing)</p>
 <ol>
-<li>Right-click in the <strong>right pane</strong> (empty space).  </li>
-<li>Select <strong>New → DWORD (32-bit) Value</strong>.  </li>
+<li>Right-click in the <code>right pane</code> (empty space).  </li>
+<li>Select <code>New → DWORD (32-bit) Value</code>.  </li>
 <li>Type the name exactly as shown in the table (e.g., <code>EnableFullTrustStartupTasks</code>).  </li>
-<li>Press <strong>Enter</strong> to save the name.  </li>
-<li><strong>Double-click</strong> the new entry.  </li>
-<li>In the <strong>Value data</strong> field, enter the correct number from the table.  </li>
-<li>Click <strong>OK</strong>.  </li>
+<li>Press <code>Enter</code> to save the name.  </li>
+<li><code>Double-click</code> the new entry.  </li>
+<li>In the <code>Value data</code> field, enter the correct number from the table.  </li>
+<li>Click <code>OK</code>.  </li>
 </ol>
 </li>
 <li>
