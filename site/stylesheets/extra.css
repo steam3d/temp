@@ -1,9 +1,3 @@
-:root {
-    --md-accent-fg-color:         #0461DF; 
-    --md-primary-fg-color:        #0486F3;
-   
-    
-}
 :root, [data-md-color-scheme="default"]{
     --md-shadow-z1:                 none;
     --md-shadow-z2:                 none;
@@ -16,14 +10,6 @@
     --md-shadow-z3:                 none;
 }
 
-:root > *{
-    --md-code-bg-color: rgba(5, 136, 243, .1);
-}
-
-.md-nav--integrated .md-nav__link[for=__toc]~.md-nav {
-    border-left: .05rem solid transparent;
-}
-
 .md-header {
     background-color: var(--md-default-bg-color);
     color: var(--md-default-fg-color);
@@ -32,6 +18,11 @@
 }
 
 .md-nav--primary .md-nav__title[for=__drawer] {
+    background-color: var(--md-default-bg-color);
+    color: var(--md-default-fg-color);
+}
+
+.md-nav--primary .md-nav__title[for^="__nav"] {
     background-color: var(--md-default-bg-color);
     color: var(--md-default-fg-color);
 }
@@ -48,25 +39,8 @@
 }
 
 .md-search__form:hover{
-    background-color: hsla(207, 96%, 49%, 0.05);
-}
-
-
-
-.md-typeset table:not([class]) {
-    box-shadow: none;
-    border: none;
-    pointer-events: none;
-}
-
-
-
-.md-typeset table:not([class]) tr:nth-child(even) {
-    background-color: rgba(5, 136, 243, .05);
-}
-
-.md-typeset table:not([class]) td {
-    border-top: none;
+    background-color: transparent;
+    opacity: 0.80;    
 }
 
 .md-typeset table:not([class]) th {
