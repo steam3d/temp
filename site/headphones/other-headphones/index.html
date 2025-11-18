@@ -492,13 +492,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#show-battery-percentage" class="md-nav__link">
+  <a href="#charge-level-via-handsfree" class="md-nav__link">
     <span class="md-ellipsis">
-      Show battery percentage
+      Charge level via Handsfree
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Show battery percentage">
+    <nav class="md-nav" aria-label="Charge level via Handsfree">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1986,27 +1986,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../issue-infinite-disconnect/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Infinite disconnect
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../issue-airpods-status-not-updating/" class="md-nav__link">
         
   
@@ -2220,13 +2199,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#show-battery-percentage" class="md-nav__link">
+  <a href="#charge-level-via-handsfree" class="md-nav__link">
     <span class="md-ellipsis">
-      Show battery percentage
+      Charge level via Handsfree
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Show battery percentage">
+    <nav class="md-nav" aria-label="Charge level via Handsfree">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2329,11 +2308,19 @@
 
 <h1 id="other-headphones">Other headphones<a class="headerlink" href="#other-headphones" title="Permanent link">⚓︎</a></h1>
 <!-- BEGIN INCLUDE features/general-show-battery-percentage.md -->
-<h2 id="show-battery-percentage">Show battery percentage<a class="headerlink" href="#show-battery-percentage" title="Permanent link">⚓︎</a></h2>
-<p>Allows you to get the charge level using Handsfree profile. This method is suitable for most unsupported headphones. The accuracy of the charge level depends on the headphones.</p>
-<blockquote>
+<h2 id="charge-level-via-handsfree">Charge level via Handsfree<a class="headerlink" href="#charge-level-via-handsfree" title="Permanent link">⚓︎</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<ul>
+<li>Sometimes the charge level may not be displayed, try reconnecting the headphones. </li>
+<li>The headphones may disappear from the sound out list for 5-10 seconds.</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>As long as this feature is enabled, the voice communication will be unavailable, you could not make the calls in applications like Skype, Discord and, etc using the headphone microphone.</p>
-</blockquote>
+</div>
+<p>Allows you to get the charge level using Handsfree profile. This method is suitable for most unsupported headphones. The accuracy of the charge level depends on the headphones.</p>
 <p><img alt="" src="../../media/screenshots/headphones-show-battery-percentage.gif" /></p>
 <table>
 <thead>
@@ -2345,7 +2332,7 @@
 <tbody>
 <tr>
 <td>On</td>
-<td>Restart MagicPods to apply changes. After restart will be available extra option <code>Low battery notification</code>.</td>
+<td>Restart MagicPods to apply changes.</td>
 </tr>
 <tr>
 <td>Off</td>
@@ -2353,13 +2340,6 @@
 </tr>
 </tbody>
 </table>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<ul>
-<li>Sometimes the charge level may not be displayed, try reconnecting the headphones. </li>
-<li>The headphones may disappear from the sound out list for 5-10 seconds.</li>
-</ul>
-</div>
 <h5 id="tested-on-headphones">Tested on headphones<a class="headerlink" href="#tested-on-headphones" title="Permanent link">⚓︎</a></h5>
 <ol>
 <li>Xiaomi AirDots</li>
@@ -2380,27 +2360,86 @@
 
 <!-- BEGIN INCLUDE features/general-low-audio-latency.md -->
 <h2 id="low-audio-latency">Low audio latency<a class="headerlink" href="#low-audio-latency" title="Permanent link">⚓︎</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Some Bluetooth drivers have already fixed this problem. If you do not experience a difference, disable this feature.</p>
+</div>
 <p>Reduces the delay between frequent switching on (play) and off (pause) of the sound. Useful when working in Premiere Pro or Audition. The feature can increase battery consumption because it prevents the headphones from going into standby mode.</p>
-<blockquote>
-<p>Some Bluetooth drivers have already fixed this problem. If you do not experience a difference, disable this feature</p>
-</blockquote>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>On</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Off</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
 <!-- END INCLUDE -->
 
 <!-- BEGIN INCLUDE features/general-auto-play.md -->
 <h2 id="auto-play">Auto play<a class="headerlink" href="#auto-play" title="Permanent link">⚓︎</a></h2>
-<p>Send the «Play» command after connecting the headphones. If there are no open players Windows will ignore the command. </p>
+<p>Send the "Play" command after connecting the headphones. If there are no open players Windows will ignore the command. </p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>On</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Off</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
 <!-- END INCLUDE -->
 
 <!-- BEGIN INCLUDE features/general-auto-pause.md -->
 <h2 id="auto-pause">Auto pause<a class="headerlink" href="#auto-pause" title="Permanent link">⚓︎</a></h2>
-<p>Pause playback after disconnecting headphones. Disconnecting headphones using MagicPods reduces the delay before pausing. (By any method: button, tray menu or hotkey)</p>
+<p>Pause playback after disconnecting headphones. Disconnecting headphones using MagicPods reduces the delay before pausing (By any method: button, tray menu or hotkey). </p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>On</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Off</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
 <!-- END INCLUDE -->
 
 <!-- BEGIN INCLUDE features/general-auto-disable-hfp.md -->
 <h2 id="auto-disable-handsfree">Auto disable Handsfree<a class="headerlink" href="#auto-disable-handsfree" title="Permanent link">⚓︎</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><code>Show battery percentage</code> will not work if HandsFree is disabled.</p>
+<p><code>Charge level via Handsfree</code> will not work if HandsFree is disabled.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Disabling Handsfree will considerably speed up the headphone connection.</p>
 </div>
 <p>The Handsfree profile is used for voice communication and has poor microphone and sound quality. All Bluetooth headphones use this profile.</p>
 <table>
@@ -2421,10 +2460,6 @@
 </tr>
 </tbody>
 </table>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Disabling the Handsfree will speed up the headphone connection considerably</p>
-</div>
 <h3 id="microphone-doesnt-work">Microphone doesn't work<a class="headerlink" href="#microphone-doesnt-work" title="Permanent link">⚓︎</a></h3>
 <!-- BEGIN INCLUDE issues/issue-enable-hfp.md -->
 <p>If you are having trouble enabling HandsFree service or manual control it, follow these steps:</p>
@@ -2440,7 +2475,7 @@
 
 <!-- BEGIN INCLUDE features/general-switch-sound-output-headphones.md -->
 <h2 id="switch-sound-output-to-headphones">Switch sound output to headphones<a class="headerlink" href="#switch-sound-output-to-headphones" title="Permanent link">⚓︎</a></h2>
-<p>Force the sound output to switch to the headphones after connection. This option does not apply if «Auto switch sound output» is enabled.</p>
+<p>Force the sound output to switch to the headphones after connection. This option does not apply if <code>Auto switch sound output</code> is enabled.</p>
 <table>
 <thead>
 <tr>
@@ -2463,10 +2498,14 @@
 
 <!-- BEGIN INCLUDE features/general-low-battery-notification.md -->
 <h2 id="low-battery-notification">Low battery notification<a class="headerlink" href="#low-battery-notification" title="Permanent link">⚓︎</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<ul>
+<li>Turn on MagicPods in VoiceOver settings so low battery notifications are read out by a narrator.</li>
+<li>Customize the notification priority for MagicPods in Windows Notification Settings so low battery notifications are shown in Focus mode.</li>
+</ul>
+</div>
 <p>Show a notification when the headphone charge is below the specified value. The notification is displayed once for each connected headphones.</p>
-<blockquote>
-<p>You can customize the priority of notifications and allow notifications in focus mode in Windows Notification Settings.</p>
-</blockquote>
 <table>
 <thead>
 <tr>
@@ -2485,10 +2524,6 @@
 </tr>
 </tbody>
 </table>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>To have the notification read out by a narrator, turn on MagicPods in the VoiceOver settings</p>
-</div>
 <!-- END INCLUDE -->
 
 
