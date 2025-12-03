@@ -335,6 +335,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#quick-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#installation" class="md-nav__link">
     <span class="md-ellipsis">
       Installation
@@ -357,15 +366,6 @@
   <a href="#manual-installation" class="md-nav__link">
     <span class="md-ellipsis">
       Manual installation
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#getting-started" class="md-nav__link">
-    <span class="md-ellipsis">
-      Getting Started
     </span>
   </a>
   
@@ -2181,6 +2181,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#quick-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#installation" class="md-nav__link">
     <span class="md-ellipsis">
       Installation
@@ -2203,15 +2212,6 @@
   <a href="#manual-installation" class="md-nav__link">
     <span class="md-ellipsis">
       Manual installation
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#getting-started" class="md-nav__link">
-    <span class="md-ellipsis">
-      Getting Started
     </span>
   </a>
   
@@ -2271,18 +2271,24 @@
 
 
 <h1 id="magicaap-community-driver">MagicAAP (Community) driver<a class="headerlink" href="#magicaap-community-driver" title="Permanent link">⚓︎</a></h1>
-<div class="admonition failure">
-<p class="admonition-title">Failure</p>
-<p>The MagicAAP (Community) driver can no longer be installed after the October 2025 Windows update. Please use the <a href="../fun-magicaap/">official unsigned version of the driver</a> instead.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Requires MagicPods version 2.0.72.0 and above. Please don’t forget to create a system restore point.</p>
 </div>
 <p>The MagicAAP (Community) driver is the same version as <a href="../fun-magicaap/">MagicAAP (Official)</a>, but it was signed using a workaround by a member of our <a href="https://discord.com/invite/UyY4PY768V">community</a>.</p>
 <p>As a downside, Windows Defender may flag the driver as potentially unwanted software, and some game anti-cheat systems might detect it.</p>
-<p>You can read more about the discussion <a href="https://discord.com/channels/1083322534675632188/1083322534675632191/1372238889988653108">here</a> and <a href="https://discord.com/channels/1083322534675632188/1372235563163320330/1372235563163320330">here</a>.</p>
-<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">⚓︎</a></h2>
-<p>To download and install the MagicAAP (Community) driver, follow the instructions below.</p>
-<p><a class="md-button md-button--primary" href="https://magicpods.app/utils/magicaap_community.zip" target="_blank">Download</a></p>
-<pre><code>SHA256          D971A287765D8076F2A84547EDCD34D6D6CDE4EF3C3C7A82DA6E28751C5A644F
+<p>You can read more about the discussion <a href="https://discord.com/channels/1083322534675632188/1445078913767444511">here</a>.</p>
+<h2 id="quick-installation">Quick installation<a class="headerlink" href="#quick-installation" title="Permanent link">⚓︎</a></h2>
+<p>Run the command in PowerShell:</p>
+<pre><code>irm &quot;https://magicpods.app/utils/magicaap-community-v1.ps1&quot; | iex
 </code></pre>
+<video controls style="max-width: 100%; height: auto;">
+  <source src="/media/magicaap-community-install.mp4" type="video/mp4">
+</video>
+
+<p>You're ready to go. Launch MagicPods and connect your AirPods. Expand the settings for the AirPods you want, and you'll see the familiar iPhone-like settings.</p>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">⚓︎</a></h2>
+<p>To install the MagicAAP (Community) driver, please refer to the installation instructions below.</p>
 <h3 id="automatic-installation">Automatic installation<a class="headerlink" href="#automatic-installation" title="Permanent link">⚓︎</a></h3>
 <ol>
 <li>Turn off Windows Defender:<ol>
@@ -2292,11 +2298,26 @@
 <li>Turn off <code>Real-time protection</code></li>
 </ol>
 </li>
-<li>Double-click the file <code>install.bat</code>.</li>
+<li>Open PowerShell:<ol>
+<li>Press Win, type <code>PowerShell</code>, and open it.</li>
+</ol>
+</li>
+<li>Run a command:</li>
+</ol>
+<pre><code>irm &quot;https://magicpods.app/utils/magicaap-community-v1.ps1&quot; | iex
+</code></pre>
+<ol start="4">
+<li>When the "Command Prompt" window opens:<ol>
+<li>Type 1 and press Enter.</li>
+</ol>
+</li>
 <li>Wait — the driver will install automatically.</li>
-<li>Turn Windows Defender back on.</li>
+<li>Done. Type 3 and press Enter to exit and close <code>PowerShell</code>.</li>
 </ol>
 <h3 id="manual-installation">Manual installation<a class="headerlink" href="#manual-installation" title="Permanent link">⚓︎</a></h3>
+<p><a class="md-button md-button--primary" href="https://magicpods.app/utils/magicaap_community_v1.zip" target="_blank">Download</a></p>
+<pre><code>SHA256          607637CACB7B4CEA163CFE5B4DAADECF7CCBDE04D0FFF49A27BEBC7012B138C8
+</code></pre>
 <ol>
 <li>Turn off Windows Defender:<ol>
 <li>Open <code>Windows Security</code></li>
@@ -2306,13 +2327,8 @@
 </ol>
 </li>
 <li>Close the <code>MagicPods</code> application if it is running.</li>
-<li>Change your computer's date:<ol>
-<li>Click the clock in the bottom-right corner.</li>
-<li>Select <code>Date and time settings</code>.</li>
-<li>Turn off <code>Set time automatically</code>.</li>
-<li>Set the date to: <strong>June 1, 2013</strong>.</li>
-</ol>
-</li>
+<li>Find the file named AddCert.reg.</li>
+<li>Double click on it. The certificate JemmyLoveJenny EV Root CA will be imported.</li>
 <li>Find the file named MagicAAP.inf.</li>
 <li>Right-click on it.</li>
 <li>Choose <code>Install</code> from the context menu.</li>
@@ -2322,17 +2338,25 @@
 <li>Add this folder to the Defender exclusions list.</li>
 <li>Turn Windows Defender back on.</li>
 </ol>
-<h3 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">⚓︎</a></h3>
-<blockquote>
-<p>After installing the driver, you will find MagicAAP devices in the Bluetooth section of Device Manager.</p>
-</blockquote>
-<p>You're ready to go. Launch MagicPods and connect your AirPods. Expand the settings for the AirPods you want, and you'll see the familiar iPhone-like settings.</p>
 <h2 id="uninstalling">Uninstalling<a class="headerlink" href="#uninstalling" title="Permanent link">⚓︎</a></h2>
 <p>To uninstall the MagicAAP (Community) driver, please refer to the uninstallation instructions below.</p>
 <h3 id="automatic-uninstalling">Automatic uninstalling<a class="headerlink" href="#automatic-uninstalling" title="Permanent link">⚓︎</a></h3>
 <ol>
-<li>Double-click the file <code>uninstall.bat</code>.</li>
+<li>Open PowerShell:<ol>
+<li>Press Win, type <code>PowerShell</code>, and open it.</li>
+</ol>
+</li>
+<li>Run a command:</li>
+</ol>
+<pre><code>irm &quot;https://magicpods.app/utils/magicaap-community-v1.ps1&quot; | iex
+</code></pre>
+<ol start="3">
+<li>When the <code>Command Prompt</code> window opens:<ol>
+<li>Type 2 and press Enter.</li>
+</ol>
+</li>
 <li>The driver will be removed automatically.</li>
+<li>Done. Type 3 and press Enter to exit and close <code>PowerShell</code>.</li>
 </ol>
 <h3 id="manual-uninstalling">Manual uninstalling<a class="headerlink" href="#manual-uninstalling" title="Permanent link">⚓︎</a></h3>
 <ol>
@@ -2357,7 +2381,7 @@ Provider Name:      IP Maslov Alexander Yuryevich
 Class Name:         Bluetooth
 Class GUID:         {e0cbf06c-cd8b-4647-bb8a-263b43f0f974}
 Driver Version:     06/06/2024 0.0.0.1
-Signer Name:        Shenzhen yundian Technology Co., Ltd
+Signer Name:        Hubei Dadi Network Technology Co., Ltd.
 </code></pre>
 <ol start="5">
 <li>Remember the value from <code>Published Name</code> (e.g., oem4.inf)<ul>
