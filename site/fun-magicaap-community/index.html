@@ -834,6 +834,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../headphones/apple-beatspill/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Beats Pill
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../headphones/apple-beatssolo3/" class="md-nav__link">
         
   
@@ -1406,6 +1427,69 @@
   
   <span class="md-ellipsis">
     Galaxy Buds 3 Pro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../headphones/galaxy-buds-3-fe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Galaxy Buds 3 FE
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../headphones/galaxy-buds-4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Galaxy Buds 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../headphones/galaxy-buds-4-pro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Galaxy Buds 4 Pro
   </span>
   
 
@@ -2326,8 +2410,8 @@
 <p>You can read more about the discussion <a href="https://discord.com/channels/1083322534675632188/1445078913767444511">here</a>.</p>
 <h2 id="quick-installation">Quick installation<a class="headerlink" href="#quick-installation" title="Permanent link">⚓︎</a></h2>
 <p>Run the command in PowerShell:</p>
-<pre><code>irm &quot;https://magicpods.app/utils/magicaap-community-v1.ps1&quot; | iex
-</code></pre>
+<div class="highlight"><pre><span></span><code>irm &quot;https://magicpods.app/utils/magicaap-community-v1.ps1&quot; | iex
+</code></pre></div>
 <video controls style="max-width: 100%; height: auto;">
   <source src="/media/magicaap-community-install.mp4" type="video/mp4">
 </video>
@@ -2348,11 +2432,9 @@
 <li>Press Win, type <code>PowerShell</code>, and open it.</li>
 </ol>
 </li>
-<li>Run a command:</li>
-</ol>
-<pre><code>irm &quot;https://magicpods.app/utils/magicaap-community-v1.ps1&quot; | iex
-</code></pre>
-<ol start="4">
+<li>Run a command:
+<div class="highlight"><pre><span></span><code>irm &quot;https://magicpods.app/utils/magicaap-community-v1.ps1&quot; | iex
+</code></pre></div></li>
 <li>When the "Command Prompt" window opens:<ol>
 <li>Type 1 and press Enter.</li>
 </ol>
@@ -2363,8 +2445,8 @@
 </ol>
 <h3 id="manual-installation">Manual installation<a class="headerlink" href="#manual-installation" title="Permanent link">⚓︎</a></h3>
 <p><a class="md-button md-button--primary" href="https://magicpods.app/utils/magicaap_community_v1.zip" target="_blank">Download</a></p>
-<pre><code>SHA256          607637CACB7B4CEA163CFE5B4DAADECF7CCBDE04D0FFF49A27BEBC7012B138C8
-</code></pre>
+<div class="highlight"><pre><span></span><code>SHA256          607637CACB7B4CEA163CFE5B4DAADECF7CCBDE04D0FFF49A27BEBC7012B138C8
+</code></pre></div>
 <ol>
 <li>Turn off Windows Defender:<ol>
 <li>Open <code>Windows Security</code></li>
@@ -2393,11 +2475,9 @@
 <li>Press Win, type <code>PowerShell</code>, and open it.</li>
 </ol>
 </li>
-<li>Run a command:</li>
-</ol>
-<pre><code>irm &quot;https://magicpods.app/utils/magicaap-community-v1.ps1&quot; | iex
-</code></pre>
-<ol start="3">
+<li>Run a command:
+<div class="highlight"><pre><span></span><code>irm &quot;https://magicpods.app/utils/magicaap-community-v1.ps1&quot; | iex
+</code></pre></div></li>
 <li>When the <code>Command Prompt</code> window opens:<ol>
 <li>Type 2 and press Enter.</li>
 </ol>
@@ -2415,31 +2495,25 @@
 <li>Select <code>Run as administrator</code>.</li>
 </ol>
 </li>
-<li>Enter the following command and press Enter:</li>
-</ol>
-<pre><code>pnputil /enum-drivers
-</code></pre>
-<ol start="4">
-<li>Look for a block similar to this:</li>
-</ol>
-<pre><code>Published Name:     oem4.inf
+<li>Enter the following command and press Enter:
+<div class="highlight"><pre><span></span><code>pnputil /enum-drivers
+</code></pre></div></li>
+<li>Look for a block similar to this:
+<div class="highlight"><pre><span></span><code>Published Name:     oem4.inf
 Original Name:      magicaap.inf
 Provider Name:      IP Maslov Alexander Yuryevich
 Class Name:         Bluetooth
 Class GUID:         {e0cbf06c-cd8b-4647-bb8a-263b43f0f974}
 Driver Version:     06/06/2024 0.0.0.1
 Signer Name:        Hubei Dadi Network Technology Co., Ltd.
-</code></pre>
-<ol start="5">
+</code></pre></div></li>
 <li>Remember the value from <code>Published Name</code> (e.g., oem4.inf)<ul>
 <li>PAY CLOSE ATTENTION — IF YOU CHOOSE THE WRONG "PUBLISHED NAME", YOU MIGHT DELETE ANOTHER DRIVER</li>
 </ul>
 </li>
-<li>Enter the command below and press Enter to delete the driver (Replace oem4.inf with the actual value you found.):</li>
-</ol>
-<pre><code>pnputil /delete-driver oem4.inf /uninstall
-</code></pre>
-<ol start="7">
+<li>Enter the command below and press Enter to delete the driver (Replace oem4.inf with the actual value you found.):
+<div class="highlight"><pre><span></span><code>pnputil /delete-driver oem4.inf /uninstall
+</code></pre></div></li>
 <li>Remove the <code>magicaap</code> folder from Defender exclusions.</li>
 </ol>
 
@@ -2459,6 +2533,8 @@ Signer Name:        Hubei Dadi Network Technology Co., Ltd.
             </div>
           
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
@@ -2494,10 +2570,12 @@ Signer Name:        Hubei Dadi Network Technology Co., Ltd.
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.top"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.top", "content.tabs.link"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.60a45f97.min.js"></script>
+      
+        <script src="../javascripts/tabs.js"></script>
       
     
   </body>
