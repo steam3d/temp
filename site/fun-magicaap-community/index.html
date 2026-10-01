@@ -335,6 +335,39 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#before-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Before Installation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Before Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#disable-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disable Policy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restore-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Restore Policy
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#quick-installation" class="md-nav__link">
     <span class="md-ellipsis">
       Quick installation
@@ -2370,6 +2403,39 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#before-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Before Installation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Before Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#disable-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disable Policy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restore-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Restore Policy
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#quick-installation" class="md-nav__link">
     <span class="md-ellipsis">
       Quick installation
@@ -2460,17 +2526,46 @@
 
 
 <h1 id="magicaap-community-driver">MagicAAP (Community) driver<a class="headerlink" href="#magicaap-community-driver" title="Permanent link">⚓︎</a></h1>
-<div class="admonition failure">
-<p class="admonition-title">Failure</p>
-<p>Starting with the <a href="https://support.microsoft.com/en-us/windows/the-windows-driver-policy-ecd2a78c-750c-415d-93f2-e37302ce0443">April 2026 security update</a>, Windows blocks all drivers that are not signed by Microsoft. If you have already updated your Windows, please use <a href="../fun-magicaap/">MagicAAP (Official)</a>. </p>
-</div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Requires MagicPods version 2.0.72.0 and above. Please don’t forget to create a system restore point.</p>
 </div>
-<p>The MagicAAP (Community) driver is the same version as <a href="../fun-magicaap/">MagicAAP (Official)</a>, but it was signed using a workaround by a member of our <a href="https://discord.com/invite/UyY4PY768V">community</a>.</p>
-<p>As a downside, Windows Defender may flag the driver as potentially unwanted software, and some game anti-cheat systems might detect it.</p>
-<p>You can read more about the discussion <a href="https://discord.com/channels/1083322534675632188/1445078913767444511">here</a>.</p>
+<p>MagicAAP (Community) is identical to the <a href="../fun-magicaap/">MagicAAP (Official)</a>, but was signed by a community member using a <a href="https://discord.com/channels/1083322534675632188/1445078913767444511">workaround</a>. It may be flagged by Windows Defender or detected by some anti-cheat systems.</p>
+<h2 id="before-installation">Before Installation<a class="headerlink" href="#before-installation" title="Permanent link">⚓︎</a></h2>
+<p>If you have installed the <a href="https://support.microsoft.com/en-us/windows/the-windows-driver-policy-ecd2a78c-750c-415d-93f2-e37302ce0443">April 2026 Windows Security Update or later</a>, the new Windows Driver Policy may prevent the driver from loading. The policy must remain disabled while using the driver.</p>
+<h3 id="disable-policy">Disable Policy<a class="headerlink" href="#disable-policy" title="Permanent link">⚓︎</a></h3>
+<ol>
+<li>Open PowerShell as Administrator:<ol>
+<li>Click the Start button.</li>
+<li>Type PowerShell.</li>
+<li>Right-click on the result.</li>
+<li>Select <code>Run as administrator</code>.</li>
+</ol>
+</li>
+<li>Enter the following command and press Enter:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="p">(</span><span class="nb">Test-Path</span> <span class="s2">&quot;C:\Windows\System32\CodeIntegrity\CiPolicies\Active\{8F9CB695-5D48-48D6-A329-7202B44607E3}.cip&quot;</span><span class="p">)</span> <span class="p">{</span> <span class="nb">Copy-Item</span> <span class="s2">&quot;C:\Windows\System32\CodeIntegrity\CiPolicies\Active\{8F9CB695-5D48-48D6-A329-7202B44607E3}.cip&quot;</span> <span class="p">(</span><span class="nb">New-Item</span> <span class="n">-ItemType</span> <span class="n">Directory</span> <span class="n">-Force</span> <span class="s2">&quot;C:\DriverPolicyBackup&quot;</span><span class="p">);</span> <span class="k">if</span> <span class="p">($?)</span> <span class="p">{</span> <span class="n">CiTool</span><span class="p">.</span><span class="n">exe</span> <span class="p">-</span><span class="n">-remove-policy</span> <span class="s2">&quot;{8F9CB695-5D48-48D6-A329-7202B44607E3}&quot;</span> <span class="p">}</span> <span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="nb">Write-Host</span> <span class="s2">&quot;Windows Driver Policy is not installed. You can proceed with the driver installation.&quot;</span> <span class="n">-ForegroundColor</span> <span class="n">Green</span> <span class="p">}</span>
+</code></pre></div>
+<ol start="3">
+<li>Restart your computer.</li>
+</ol>
+<p>A backup will be saved to C:\DriverPolicyBackup. Do not delete it — it is required to restore the policy.</p>
+<h3 id="restore-policy">Restore Policy<a class="headerlink" href="#restore-policy" title="Permanent link">⚓︎</a></h3>
+<ol>
+<li>Open PowerShell as Administrator:<ol>
+<li>Click the Start button.</li>
+<li>Type PowerShell.</li>
+<li>Right-click on the result.</li>
+<li>Select <code>Run as administrator</code>.</li>
+</ol>
+</li>
+<li>Enter the following command and press Enter:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="n">CiTool</span><span class="p">.</span><span class="n">exe</span> <span class="p">-</span><span class="n">-update-policy</span> <span class="s2">&quot;C:\DriverPolicyBackup\{8F9CB695-5D48-48D6-A329-7202B44607E3}.cip&quot;</span>
+</code></pre></div>
+<ol start="3">
+<li>Restart your computer.</li>
+</ol>
 <h2 id="quick-installation">Quick installation<a class="headerlink" href="#quick-installation" title="Permanent link">⚓︎</a></h2>
 <p>Run the command in PowerShell:</p>
 <div class="highlight"><pre><span></span><code>irm &quot;https://magicpods.app/utils/magicaap-community-v1.ps1&quot; | iex
@@ -2631,7 +2726,7 @@ Signer Name:        Hubei Dadi Network Technology Co., Ltd.
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.top"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.top", "content.code.copy"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.60a45f97.min.js"></script>
